@@ -1,1 +1,4 @@
 node_modules/
+Terraform/.terraform/
+Terraform/*.tfstate
+Terraform/*.tfstate.*
