@@ -32,6 +32,7 @@ pipeline {
                     script {
                         sh '''
                             aws --version
+                            aws sts get-caller-identity
                             aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $FRONTEND_REPO
                             aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $BACKEND_REPO
                         '''
